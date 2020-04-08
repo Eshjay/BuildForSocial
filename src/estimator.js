@@ -1,36 +1,16 @@
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable no-multiple-empty-lines */
-/* eslint-disable no-unused-vars */
-/* eslint-disable indent */
 /* eslint-disable linebreak-style */
-// import reportedCases from './data';
-
-// const covid19ImpactEstimator = (data) =>{
-//     data,
-//     impact:{
-//         currentlyInfected: data * 10,
-//         infectionsByRequestedTime;
-
-//     },
-//     severeImpact:{
-//         currentlyInfected: data * 50,
-//         infectionsByRequestedTime;
-//     }
-// };
-
-// export default covid19ImpactEstimator;
-
+/* eslint-disable indent */
 const impact = {
     currentlyInfected: 0,
     infectionsByRequestedTime: 0,
     infectedPeoplePerDay: 0,
     infectedPeoplePer30Days: 0
 };
-const severeImpact ={
+const severeImpact = {
     currentlyInfected: 0,
     infectionsByRequestedTime: 0,
     infectedPeoplePerDay: 0,
-    infectedPeoplePer30Days: 0,
+    infectedPeoplePer30Days: 0
 };
 const Data = {
     region: {
@@ -48,7 +28,7 @@ const Data = {
 
   const covid19ImpactEstimator = (data) => {
       const input = data;
-      impact.currentlyInfected = input.reportedCases *10;
+      impact.currentlyInfected = input.reportedCases * 10;
       severeImpact.currentlyInfected = input.reportedCases * 50;
       impact.infectionsByRequestedTime = impact.currentlyInfected * 512;
       severeImpact.infectionsByRequestedTime = severeImpact.currentlyInfected * 512;
@@ -78,4 +58,3 @@ const Data = {
       };
   };
   export default covid19ImpactEstimator;
-
