@@ -57,4 +57,5 @@ const Data = {
           }
       };
   };
+  covid19ImpactEstimator(Data);
   export default covid19ImpactEstimator;
