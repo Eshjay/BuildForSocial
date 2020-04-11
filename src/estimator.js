@@ -51,7 +51,6 @@ const covid19ImpactEstimator = (data) => {
                             * region.avgDailyIncomeInUSD) / period);
 
   
-  
     const impact = {
       currentlyInfected: impactCurrentlyInfected,
       infectionsByRequestedTime: impactInfectionsByRequestedTime,
