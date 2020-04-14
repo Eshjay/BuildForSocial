@@ -1,0 +1,129 @@
+<!doctype html>
+<html ⚡ lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="description" content="Welcome to Covid 19 estimator for accurate calculation of the cases surrouding you>
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+    <link rel="preload" href="hero-img.jpg" as="image">
+    <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com/" crossorigin>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- Import other AMP Extensions here -->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+ 
+    <style amp-custom>
+
+        *{
+          font-family:"Arvo monospace";
+        }
+        body{
+          background-size: cover;
+          background-color: #45a049;
+          background: url(https://res.cloudinary.com/dlqceb87c/image/upload/v1586735580/covid_f2cfoq.jpg);
+          background-blend-mode: multiply;
+          
+        }
+         select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            /* border: 1px solid #ccc; */
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        div {
+            color: #f8f8f8;
+            font-size: medium;
+            font-family: Arvo, Helvetica, sans-serif;
+            border-radius: 5px;
+            /* background-color: #f2f2f2; */
+            padding: 20px;
+        }
+         input{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input:focus{
+            border: 3px solid #ccc;
+          
+        }
+        h2{
+            margin-left: 20px;
+            color: #45a049;
+        }
+        </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <link rel="canonical" href=".">
+    <title>Covid19 Estimator</title>
+    <link rel="manifest" href="/manifest.json">
+  </head>
+  <body>
+    <!-- <amp-img src="covid.jpg"
+             width="625" 
+             height="360"
+             layout="responsive" 
+             alt="Covid Image of the virus">
+    </amp-img> -->
+
+    <h2 id="heading-title">Covid 19 Estimator</h2>
+    <div>
+        <form>
+            <label for="population">Population</label>
+            <input type="number" id="data-population form-input" data-population required>
+            <label for="timetoElapse">Time to elapse</label>
+            <input type="number" id="data-time-to-elapse form-input" data-time-to-elapse required>
+            <label for="reportedCases">Reported cases </label>
+            <input type="number" id="data-reported-cases" required data-reported-cases>
+            <label for="totalHospitalBeds">Total hospital beds </label>
+            <input type="number" id="data-total-Hospital-Beds form-input" required data-total-Hospital-Beds>
+           <label for="periodType">Period Type</label>
+           <select id="data-period-type" name="period-type" data-period-type>
+               <option value="days">Days</option>
+               <option value="Weeks">Weeks</option>
+               <option value="Months">Months</option>
+           </select>
+           <input type="submit" onclick="covid19ImpactEstimator(data)" value="Submit">  
+        </form>
+    </div>
+
+    <amp-analytics type="gtag" data-credentials="include">
+    <script type="application/json">
+    {
+      "vars" : {
+        "gtag_id": "UA-XXXXX-Y",
+        "config" : {
+          "UA-XXXXX-Y": {
+            "groups": "default"
+          }
+        }
+      }
+    }
+    </script>
+    <script src="/src/estimator.js"></script>
+    </amp-analytics>
+  </body>
+</html>
